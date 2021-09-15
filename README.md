@@ -10,9 +10,10 @@ The site will then:
 * Events during the given time frame
 
 This site uses
-*HTML
-*CSS
-*Javascript
+
+* HTML
+* CSS
+* Javascript
 
 ## Made by: 
 ## Ayla Duran
