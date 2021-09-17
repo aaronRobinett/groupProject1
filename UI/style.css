@@ -1,33 +1,33 @@
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*  var */
 :root {
-  --blue: #002366;
-  --accent-color: #463e52;
-  --accent2: #f80189;
-  --cream: #FFFDD0;
+--blue: rgb(0, 38, 82);
+--accent-color: black;
+--accent2: rgb(31, 141, 168);
+--cream: black;
 }
 
 html {
-  scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 /* Header code */
 header {
-  display: flex; 
-  justify-content: space-between;
-  flex-wrap: wrap;
-  list-style: none;
-  background-color: var(--blue); 
+display: flex; 
+justify-content: space-between;
+flex-wrap: wrap;
+list-style: none;
+background-color: var(--blue); 
 }
 
 header h1 {
-  padding-left: 50px;
+padding-left: 50px;
 }
 
 
@@ -36,114 +36,114 @@ header h1 {
 
 /* Body Code */
 body{
-  background-color: var(--cream); 
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+background-color: var(--cream); 
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* Footer code */
 
 footer {
-  text-decoration: none;
-  border-bottom: 2px solid var(--accent2); 
-  color: var(--cream); 
-  font-size: 1.8vw; 
-  font-weight: bold;
-  background-color: var(--blue); 
-  margin-bottom: 0;
+text-decoration: none;
+border-bottom: 2px solid var(--accent2); 
+color: var(--cream); 
+font-size: 1.8vw; 
+font-weight: bold;
+background-color: var(--blue); 
+margin-bottom: 0;
 }
 
 .footer-wrapper { 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 50px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
 
 
 /* Footer hover */
 .footer-container a:hover{
-  color: var(--accent2);
-  font-weight: bold;
-  text-shadow: 0px 0px 20px var(--accent-color);
+color: var(--accent2);
+font-weight: bold;
+text-shadow: 0px 0px 20px var(--accent-color);
 }
 
 /*hero section */
 .hero { 
-  height: 300px;
-  background-image: url("IMG/MDB3PLXY4DWMXM5JIF4XYLSVOM.jpeg");
-  border-bottom-left-radius: 30px 30px; 
-  border-bottom-right-radius: 30px 30px;
-  background-size: cover; 
-  background-position:  100% 95%; 
-  background-attachment: fixed; 
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  flex-direction: row; 
-  align-items: flex-end;
+height: 300px;
+background-image: url("IMG/living-in-portland-or.jpeg");
+background-size: cover; 
+background-position:  100% 95%; 
+background-attachment: fixed; 
+display: flex;
+justify-content: flex-end;
+flex-wrap: wrap;
+flex-direction: row; 
+align-items: flex-end;
 }
 
 .hero-subtitle { 
-  padding-bottom: 15px;
-  padding-right: 15px;
+padding-bottom: 15px;
+padding-right: 15px;
 }
 
 .left-side {
-    margin-left: 10px;
-    padding: 10px;
-    float: left;
-    width: 40%;
-    height: 100%;
+  margin-left: 10px;
+  padding: 10px;
+  float: left;
+  width: 40%;
+  height: 100%;
 }
 .content-left {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .content-left img {
-    display: block;
-    margin: 5px auto;
-    max-width: 400px;
-    max-height: 400px;
+  display: block;
+  margin: 5px auto;
+  max-width: 400px;
+  max-height: 400px;
+  
 }
 
 .right-side {
-    width: 55%;
-    display: inline-block;
-    margin-left: 20px;
+  width: 55%;
+  display: inline-block;
+  margin-left: 20px;
 }
 
 .content-right {
-    margin-bottom: 20px;
-    padding: 50px;  
+  margin-bottom: 20px;
+  padding: 50px;  
 }
 
 .content-right img {
-    max-height: 700px;
+  max-height: 700px;
+ 
 }
 
 /* span */
 .span-background { 
-  background-color: var(--accent2);
-  position: relative;
-  line-height: 1.5;
-  padding-left: 8px;
-  padding-right: 8px;
-  border-radius: 5%;
-  opacity: .8;
+background-color: var(--accent2);
+position: relative;
+line-height: 1.5;
+padding-left: 8px;
+padding-right: 8px;
+border-radius: 5%;
+opacity: .8;
 }
 
 .span-background.title { 
-  margin-top: 10px;
-  margin-bottom: 20px;
+margin-top: 10px;
+margin-bottom: 20px;
 }
 
 .span-background.opacity{
-  opacity: .95; 
-  font-size: 30px;
+opacity: .95; 
+font-size: 30px;
 }
 
 .span-background.lower-text {
-  font-size: x-small;
+font-size: x-small;
 }
 
 
