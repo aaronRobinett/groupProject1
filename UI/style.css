@@ -30,15 +30,18 @@ header h1 {
   padding-left: 50px;
 }
 
-
-
-
-
 /* Body Code */
 body{
   background-color: var(--cream); 
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+h2 {
+text-align: center;
+color: #463e52;
+font-size: 28px;
+}
+
 
 /* Footer code */
 
@@ -146,7 +149,23 @@ footer {
   font-size: x-small;
 }
 
+div.box {
+ background-color: #002366;
+}
 
+.card-content {
+  background-color: #f80189;
+  
+}
 
-
+.notification.is-primary {
+  background-color: var(--accent2);
+  position: relative;
+  line-height: 1.5;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5%;
+  opacity: .8;
+  margin-bottom: 2%;
+}
 
