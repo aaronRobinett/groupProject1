@@ -53,15 +53,21 @@
             <div class="columns">
                 <div class="column is-half"></div>
                     <div class="card-content"  id="location">
-                <input class="input is-large is-half"  type="text" placeholder="  Location">
-                <button class="button is-black"> Search</button>
+                <input class="input is-large is-half"  type="text" placeholder="  Enter Location">
                     </div>
             
         <!--Date Search-->
+        <div class="modal-body"></div>
                 <div class="column is-one-third"></div>
                     <div class="card-content"  id="dates">
-                <input class="input is-large is-half" type="text" placeholder="  Dates">
-                <button class="button is-black"> Search</button>
+                        <form>
+                        <div class="form-group">
+                        <label for ="modalDate"></label>
+                    <input class="input is-large is-half form-control hasDatepicker id="modalDate" type="text" placeholder="  Enter Dates" autocomplete="off">
+                </form>
+                        </div>
+                <button class="button is-black">Search</button>
+                
         <!-- Button code-will be moved TBD-->
         <div title="Add to Calendar" class="addeventatc">
             Add to Calendar
@@ -98,7 +104,7 @@
                 
             </section>
 
-            <script src="./js/weatherApi.js"></script>
+            
         
         </Main>
         
@@ -112,6 +118,12 @@
             };
         </script>
     <script src="./js/weatherApi.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="moment.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+    moment().format();
+    </script>
 
     </body>
     <!-- Footer -->

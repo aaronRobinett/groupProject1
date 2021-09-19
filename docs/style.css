@@ -187,13 +187,13 @@ div.box {
 } */
 
 .column.is-half {
-  float: left;
-  flex: 10%;
+  /* float:right; */
+  flex: 2%;
 }
 
 .column.is-one-third {
-  float: right;
-  flex: 20%;
+  /* float: left; */
+  flex: 0%;
 }
 
  
