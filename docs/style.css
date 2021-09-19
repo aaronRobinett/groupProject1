@@ -208,6 +208,11 @@ div.box {
    margin-bottom: 2%;
  }
  
+ #addeventatc1.addeventatc {
+   border: var(--cream);
+   position: relative;
+   opacity: .8;
+ }
  
  
 
