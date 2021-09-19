@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
         <script src="https://kit.fontawesome.com/2a1a81d8e8.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <link rel="stylesheet" href="./style.css">
@@ -31,6 +32,12 @@
     </section>
 
      
+
+
+
+
+
+
         <!-- Main Content -->
         <Main>
             <!--Date and location-->
@@ -73,6 +80,18 @@
                 <article class="content-left">
                     <img src="IMG/weather.jpg"/>
                 </article>
+
+                <!-- Button code-will be moved TBD-->
+<div title="Add to Calendar" class="addeventatc">
+    Add to Calendar
+    <span class="start">10/03/2021 08:00 AM</span>
+    <span class="end">10/03/2021 10:00 AM</span>
+    <span class="timezone">America/Los_Angeles</span>
+    <span class="title">Summary of the event</span>
+    <span class="description">Description of the event</span>
+    <span class="location">Location of the event</span>
+</div>
+
                 <article id="itinerary" class="content-left">
                     <img src="IMG/Untitled_Artwork 5.jpg"/>
                 </article>
@@ -80,6 +99,7 @@
             </section>
         </Main>
         <script>
+            
             function projectClicked(input) {
                 var input = input;
                 if (input == "") {
@@ -87,6 +107,8 @@
                 }
             };
         </script>
+        
+
     </body>
     <!-- Footer -->
     <footer>
