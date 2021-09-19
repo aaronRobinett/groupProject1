@@ -151,11 +151,10 @@ footer {
 
 div.box {
  background-color: #002366;
-}
+ }
 
 .card-content {
   background-color: #f80189;
-  
 }
 
 .notification.is-primary {
@@ -169,3 +168,34 @@ div.box {
   margin-bottom: 2%;
 }
 
+.input.is-large.is-half {
+  background-color: #FFFDD0;
+}
+
+/* #location.card-content {
+  float: left;
+  width: 50%;
+}
+
+#dates.card-content {
+  float: right;
+  width: 50%;
+}  */
+
+/* .row {
+  display: flex;
+} */
+
+.column.is-half {
+  float: left;
+  flex: 50%;
+}
+
+.column.is-one-third {
+  float: right;
+  flex: 50%;
+}
+/* .column.is-half {
+  float: left;
+  width: 50%;
+} */
