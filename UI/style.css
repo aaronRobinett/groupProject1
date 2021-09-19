@@ -172,15 +172,18 @@ div.box {
   background-color: #FFFDD0;
 }
 
-/* #location.card-content {
+#location.card-content {
   float: left;
-  width: 50%;
+  width: 100%;
+  border-radius: 5%;
 }
+
 
 #dates.card-content {
   float: right;
   width: 50%;
-}  */
+  border-radius: 5%;
+}  
 
 /* .row {
   display: flex;
@@ -188,12 +191,12 @@ div.box {
 
 .column.is-half {
   float: left;
-  flex: 50%;
+  flex: 10%;
 }
 
 .column.is-one-third {
   float: right;
-  flex: 50%;
+  flex: 20%;
 }
 /* .column.is-half {
   float: left;
