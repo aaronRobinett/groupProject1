@@ -35,6 +35,21 @@ h1 {
   color: rgb(255, 255, 255);
 }
 
+
+.nav-effects .search-container {
+  float: right;
+}
+
+.nav-effects input[type=text] {
+  padding: 6px;
+  margin-top: 15px;
+  margin-right: 15px;
+  font-size: 17px;
+  border: none;
+  border-radius: 15px;
+}
+
+
 /*hero section */
 .hero { 
 height: 300px;
