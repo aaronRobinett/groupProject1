@@ -244,5 +244,9 @@ color: azure;
 }
   
 
-
+.weather-flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+}
 
