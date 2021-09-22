@@ -1,86 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="./style.css">
-        <title>Vacation Planner</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css">
+    <title>FéRIAS<</title>
+</head>
+<body>
 
-    <body>
-        <header>
-            <!-- title background -->
-            <span class="span-background title">
-                <h1>Vacation Planner</h1>
-            </span>
-            <nav>
+<div id="page-container">
+    <div id="content-wrap">
+
+    
+            <header>
+                <!-- title background -->
+                <span class="span-background title">
+                    <h1>FéRIAS</h1>
+                </span>
                 <!-- Header nav bar -->
-                <ul class="nav-effects">
-                </ul>
-            </nav>
-        </header>
+                 <nav>
+                    <ul class="nav-effects">
+                        <div class="search-container">
+                            <form action="/action_page.php">
+                              <input type="text" placeholder="Search.." name="search">
+                            </form>
+                          </div> 
+                    </ul>
+                </nav>
+            </header>
             <!-- Hero Section -->
             <section class="hero">
-                 <div class="hero-subtitle">           
-                <span class="span-background opacity">Plan your day!</span>
-        </div>
-    </section>
+                <div class="subtitle">
+                    <span class="span-background opacity">What are you up to?</span>
+                </div>
+            </section>
 
-     
-        <!-- Main Content -->
-        <Main>
-    
-            <!--ticketmaster-->
-            <section class="right-side">
-                <article id="ticketmaster" class="content-right">
-                    <img src="IMG/ticketmaster.jpg"/>
-                </article>
-            </section>
+
+            <!-- Main Content -->
+            <Main>
+
+                <!--ticketmaster-->
+                <section class="right-side">
+                    <article id="ticketmaster" class="content-right">
+                        <img src="IMG/ticketmaster.jpeg" />
+                    </article>
+                </section>
+
+                <!--left side-->
+                <section class="left-side">
+                    <article class="content-left">
+                        <img src="IMG/weather.jpeg" />
+                    </article>
+                    
+                    <article id="itinerary" class="content-left">
+                        <img src="IMG/itinerary.jpeg" />
+                    </article>                
+                </section>
+            </Main>
+            <script>
+                function projectClicked(input) {
+                    var input = input;
+                    if (input == "") {
+                        window.open("");
+                    }
+                };
+            </script>
         
-            <!--benefits-->
-            <section class="left-side">
-                <div class="content-left" id="weatherZone">
-                 <!-- <img src="IMG/weather.jpg"/> -->
-                </div>
-                <article id="itinerary" class="content-left">
-                    <img src="IMG/Untitled_Artwork 5.jpg"/>
-                </article>
-                
-            </section>
-        </Main>
-        <script>
-            function projectClicked(input) {
-                var input = input;
-                if (input == "") {
-                    window.open("");
-                }
-            };
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-        <script src="./js/weatherApi.js"></script>
-    </body>
+    </div>
     <!-- Footer -->
-    <footer>
-        <div id="Contributors" class="footer-wrapper"> 
-            <div class="footer-container"> 
-                <div class="footer-grid-item Contribute"> 
-                    Contributors
-                </div>
-                <div class="footer-grid-item ad">
-                    <a href="https://github.com/Ayla122">Ayla Duran</a>
-                </div>
-                <div class="footer-grid-item mt"> 
-                    <a href="https://github.com/MirandaT77">Miranda Thompson</a>
-                </div>
-                <div class="footer-grid-item op"> 
-                    <a href="https://github.com/Octavio258">Octavio Politron</a>
-                </div>
-                <div class="footer-grid-item ar"> 
-                    <a href="https://github.com/aaronRobinett">Aaron Robinett</a>
+     <footer id="footer">
+        <span class="footer-wrapper">
+            <div class="footer-container">
+                <div class="footer-text">
+                    <h2>Contributors</h2>
+                    <h3>
+                        <a href="https://github.com/Ayla122">Ayla Duran</a>
+                        <a href="https://github.com/MirandaT77">Miranda Thompson</a>
+                        <span class="line">
+                        <a href="https://github.com/Octavio258">Octavio Politron</a>
+                        <a href="https://github.com/aaronRobinett">Aaron Robinett</a>
+                    
+                    </h3>
                 </div>
             </div>
-        </div>
-    </footer>
+        </span>
+    </footer> 
+</div>
+
+
+
+  
+    
+    
+    
+  </div>
+  
+
+
+
+</body>
 </html>
+
