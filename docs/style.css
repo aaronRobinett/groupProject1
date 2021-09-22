@@ -242,4 +242,16 @@ color: azure;
     max-width: 400px;
     max-height: 400px;  
   }
+
 }
+
+
+  
+
+.weather-flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+}
+}
+
