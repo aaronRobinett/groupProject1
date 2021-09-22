@@ -1,0 +1,235 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*  var */
+:root {
+--blue: rgb(0, 38, 82);
+--accent-color: black;
+--accent2: rgb(31, 141, 168);
+--cream: black;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+/* Header code */
+header {
+display: flex; 
+justify-content: space-between;
+flex-wrap: wrap;
+list-style: none;
+background-color: var(--blue); 
+border-bottom: 5px solid var(--cream); 
+}
+
+header h1 {
+padding-left: 50px;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+}
+
+
+.nav-effects .search-container {
+  float: right;
+}
+
+.nav-effects input[type=text] {
+  padding: 6px;
+  margin-top: 15px;
+  margin-right: 15px;
+  font-size: 17px;
+  border: none;
+  border-radius: 15px;
+}
+
+
+/*hero section */
+.hero { 
+height: 300px;
+background-image: url("IMG/living-in-portland-or.jpeg");
+background-size: cover; 
+background-position:  100% 95%; 
+background-attachment: fixed; 
+display: flex;
+justify-content: flex-end;
+flex-wrap: wrap;
+flex-direction: row; 
+align-items: flex-end;
+}
+
+.subtitle { 
+  justify-content: space-between;
+}
+
+/* Body Code */
+body{
+background-color: var(--cream); 
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+height: 100%; 
+}
+
+#page-container {
+  position: absolute;
+  min-height: 100vh;
+  width: 100%; 
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    
+}
+
+.left-side {
+  padding-top: 50px;
+  padding-left: 70px;
+  padding-bottom: 50px;
+  float: left; 
+  width: 40%;
+  height: 100%;
+  display: inline-table;
+  margin-bottom: 50px;
+}
+.content-left {
+  margin-bottom: 70px;
+}
+
+.content-left img {
+  display: block;
+  max-width: 500px;
+  max-height: 500px; 
+  
+}
+
+.right-side {
+  width: 55%;
+  display: inline-table;
+  margin-right: 10px;
+}
+
+.content-right {
+  padding-bottom: 20px;
+  padding-top: 50px;  
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.content-right img {
+  max-height: 700px;
+}
+
+/* span */
+span {
+  color: white;
+}
+.span-background { 
+background-color: var(--accent2);
+position: relative;
+line-height: 1.5;
+padding-left: 8px;
+padding-right: 8px;
+border-radius: 5%;
+opacity: .8;
+}
+
+.span-background.title { 
+margin-top: 10px;
+margin-bottom: 20px;
+}
+
+.span-background.opacity{
+opacity: .95; 
+font-size: 30px;
+}
+
+.span-background.lower-text {
+font-size: x-small;
+} 
+
+/* Footer code */
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height:auto;
+  background-color: var(--blue); 
+  border-top: 2px solid var(--accent2);      
+  justify-content: space-between;
+  text-align: center;
+  word-spacing: 10px;
+} 
+
+a {
+  color: white;
+}
+
+h2 {
+padding: 5px;
+}
+
+h3 {
+  padding-bottom: 15px;
+  }
+
+/* Footer hover */
+a:hover{ 
+color: var(--accent2);
+font-weight: bold;
+text-shadow: 0px 0px 20px var(--accent-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .content-right img {
+    max-height: 600px;
+  }
+
+  .content-right {
+      /* padding-bottom: 10px; */
+      padding-left: 70px;
+      padding-right: 50px;
+    }
+
+  .content-left img {
+    max-width: 600px;
+    max-height: 600px;  
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .content-right img {
+    max-height: 500px;
+  }
+
+  .content-left img {
+    max-width: 500px;
+    max-height: 500px;  
+  }
+}
+
+@media screen and (max-width: 700px) {
+.line {
+    display: block;
+  }
+
+}
+
+@media screen and (max-width: 575px) {
+
+  .content-right img {
+    max-height: 400px;
+  }
+  .content-left img {
+    max-width: 400px;
+    max-height: 400px;  
+  }
+}
+  
+
+
+

@@ -148,7 +148,7 @@ font-size: x-small;
 
 /*TicketMaster Specific box*/
 .panel-background{
-  background-color: aliceblue;
+  background-color: var(--blue);
 }
 .panel-title{
 color: azure;
@@ -156,5 +156,10 @@ color: azure;
 .panel-body{
   color: azure;
 }
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 
 
