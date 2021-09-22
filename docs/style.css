@@ -193,6 +193,7 @@ color: azure;
 }
 .panel-body{
   color: azure;
+  /*   end of box             */
 }
 .flex-row {
   display: flex;
@@ -242,7 +243,3 @@ color: azure;
     max-height: 400px;  
   }
 }
-  
-
-
-
