@@ -93,7 +93,7 @@ var displayDefaultWeather = function (city) {
     weatherContainerEl.appendChild(weatherPictureEl);
 }
 
-g//getLocationKey("Seattle, WA");
+//getLocationKey("Seattle, WA");
 
 //Add Event listiner on click of submit of the search form 
 searchForm.addEventListener("submit", getLocationKey)
