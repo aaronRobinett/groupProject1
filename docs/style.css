@@ -175,7 +175,8 @@ padding: 5px;
 
 h3 {
   padding-bottom: 15px;
-  }
+
+}
 
 /* Footer hover */
 a:hover{ 
@@ -195,10 +196,12 @@ color: azure;
   text-emphasis-color: var(--blue);
 }
   /*   end of box             */
-}
+
 .flex-row {
   display: flex;
   flex-wrap: wrap;
+}
+
 @media screen and (max-width: 1024px) {
   .content-right img {
     max-height: 600px;
@@ -244,15 +247,5 @@ color: azure;
     max-height: 400px;  
   }
 
-}
-
-
-  
-
-.weather-flex-row {
-  display: flex;
-  flex-wrap: wrap;
-  color: black;
-}
 }
 
