@@ -111,7 +111,7 @@ var displayDefaultWeather = function (city) {
     weatherContainerEl.textContent = "";
     weatherContainerEl.setAttribute("style", "background-color: white");
     var weatherPictureEl = document.createElement("img");
-    weatherPictureEl.setAttribute("src", "http://www.clipartbest.com/cliparts/jix/6KA/jix6KA6AT.png");
+    weatherPictureEl.setAttribute("src", "../IMG/question.jpeg");
     var warningText = document.createElement("h2");
     warningText.textContent = "No weather info found for " + city;
     warningText.classList = "weather-flex-row align-center justify-space-between";
