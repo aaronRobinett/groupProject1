@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.material.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./style.css">
     <title>FéRIAS</title>
 </head>
@@ -37,6 +43,42 @@
     </section>
             <!-- Main Content -->
             <Main>
+
+            <!--Date and location-->
+    <br>
+    <div class="container">
+            <div class="notification is-primary">
+        <h2>Enter location and travel dates to show weather and Ticketmaster events!</h2>
+        </div>
+    
+    
+    <!--Location Search-->
+    <div class="box">
+        <div class="columns">
+    
+    
+    <div class="card-content"  id="location">
+        <input class="input is-large is-half"  type="text" placeholder="  Enter Location">
+            </div>  
+           <div class="date">
+            <input type="date" data-display-mode="inline" data-is-range="true" data-close-on-select="false" justify="">
+        
+            <button class="button is-black" id="saveSearch">Search</button> 
+              <!-- Button to add to calendar (optional) -->
+        <div title="Add to Calendar" class="addeventatc">
+            Add to Calendar
+        <span class="start">10/03/2021 08:00 AM</span>
+        <span class="end">10/03/2021 10:00 AM</span>
+        <span class="timezone">America/Los_Angeles</span>
+        <span class="title">Summary of the event</span>
+        <span class="description">Description of the event</span>
+        <span class="location">Location of the event</span>
+        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
                 <!--ticketmaster-->
                 <section class="right-side">
@@ -123,6 +165,12 @@
                     }
                 };
             </script>
+            <script src="http://cdn.kendostatic.com/2015.1.429/js/jquery.min.js"></script>
+            <script src="http://cdn.kendostatic.com/2015.1.429/js/kendo.all.min.js"></script>
+            <script src="https://kit.fontawesome.com/2a1a81d8e8.js" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+            <script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
             <script src="./js/weatherApi.js"></script>
         
@@ -146,18 +194,6 @@
         </span>
     </footer> 
 </div>
-
-
-
-  
-    
-    
-    
-  </div>
-  
-
-
-
 </body>
 </html>
 

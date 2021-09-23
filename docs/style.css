@@ -13,6 +13,7 @@
 --cream: black;
 }
 
+
 html {
 scroll-behavior: smooth;
 }
@@ -171,6 +172,7 @@ a {
 
 h2 {
 padding: 5px;
+text-align: center;
 }
 
 h3 {
@@ -201,7 +203,42 @@ color: azure;
   display: flex;
   flex-wrap: wrap;
 }
+/* Search location and dates */
+div.box {
+  background-color: var(--accent2);
+   position: relative;
+   line-height: 1.5;
+   border-radius: 5%;
+   opacity: .8;
+   margin-bottom: 2%;
+ }
 
+ .input.is-large.is-half {
+  background-color: white;
+}
+
+#location.card-content {
+  width: 50%;
+  border-radius: 5%;
+}
+
+.notification.is-primary {
+  background-color: var(--accent2);
+  position: relative;
+  opacity: .8;
+ }
+
+ .date {
+  background-color: var(--accent2);
+  position: relative;
+  line-height: 1.5;
+  padding: 3%;
+  border-radius: 5%;
+  opacity: .8;
+  margin-bottom: 2%; 
+  float: right;
+} 
+/* End Search Section */
 @media screen and (max-width: 1024px) {
   .content-right img {
     max-height: 600px;
