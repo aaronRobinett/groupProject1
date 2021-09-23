@@ -75,6 +75,10 @@ background-color: var(--cream);
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 height: 100%; 
 }
+ 
+main {
+color: var(--accent-color);
+}
 
 #page-container {
   position: absolute;
@@ -83,7 +87,7 @@ height: 100%;
 }
 
 #content-wrap {
-  padding-bottom: 2.5rem;    
+  padding-bottom: 2.5rem;   
 }
 
 .left-side {
@@ -206,11 +210,11 @@ color: azure;
 /* Search location and dates */
 div.box {
   background-color: var(--accent2);
-   position: relative;
-   line-height: 1.5;
-   border-radius: 5%;
-   opacity: .8;
-   margin-bottom: 2%;
+  position: relative;
+  line-height: 1.5;
+  border-radius: 5%;
+  opacity: .8;
+  margin-bottom: 2%;
  }
 
  .input.is-large.is-half {
@@ -226,6 +230,7 @@ div.box {
   background-color: var(--accent2);
   position: relative;
   opacity: .8;
+  font-size: 28px;
  }
 
  .date {
