@@ -25,22 +25,22 @@ var formSubmitHandler = function (event) {
     }
 };
 
-var searchForm = document.getElementById("search-form"); 
-console.log(searchForm); 
+var searchForm = document.getElementById("search-form");
+console.log(searchForm);
 
 // gets the location key for a city in the format city, state (ex: Portland, OR). Calls displayDefaultWeather
 // if location is not found.
 
 var getLocationKey = function (event) {
     //prevents page from reloading 
-    event.preventDefault(); 
+    event.preventDefault();
     //grbs value from the input search bar created 
-    var cityName = document.getElementById("search-text").value; 
+    var cityName = document.getElementById("search-text").value;
     // var city = location.trim().split(",")[0].toLowerCase();
     // var state = location.trim().split(" ")[1].toLowerCase();
-    var apiUrl = "http://dataservice.accuweather.com/locations/v1/cities/US/search?apikey=" + apiKey + "&q=" + cityName ; 
+    var apiUrl = "http://dataservice.accuweather.com/locations/v1/cities/US/search?apikey=" + apiKey + "&q=" + cityName;
     //+ "%2C%20" + state;
-    
+
     fetch(apiUrl).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
@@ -55,12 +55,8 @@ var getLocationKey = function (event) {
             displayDefaultWeather(location);
 
         })
-        .catch(function() {
-            displayDefaultWeather(location);
-        });
-            
-    }
 }
+
 
 // Uses the location key found in getLocationKey to find the 5-day forecast for the city
 var getForecast = function (key, city) {
@@ -96,13 +92,16 @@ var displayForecast = function (forecast, city) {
         return;
     }
     weatherContainerEl.textContent = "";
-    weatherContainerEl.setAttribute("style", "background-color: white");
+    var panelHeadingEl = document.createElement("div");
+    panelHeadingEl.setAttribute("class", "panel-heading");
     var cityTitleEl = document.createElement("h3");
+    cityTitleEl.setAttribute("class", "panel-title");
     cityTitleEl.textContent = "5-Day Weather Forecast for " + city;
-    weatherContainerEl.appendChild(cityTitleEl);
+    panelHeadingEl.appendChild(cityTitleEl);
+    weatherContainerEl.appendChild(panelHeadingEl);
 
     for (var i = 0; i < 5; i++) {
-        var dayForecastEl = document.createElement("h4")
+        var dayForecastEl = document.createElement("p");
         var day = moment(forecast[i].date).format("ddd M/D");
         dayForecastEl.textContent = day + "  High: " + forecast[i].highTemp + "  Low: " + forecast[i].lowTemp + "  " + forecast[i].forecast;
         weatherContainerEl.appendChild(dayForecastEl);
@@ -114,12 +113,11 @@ var displayForecast = function (forecast, city) {
 // a message that no weather info is found
 var displayDefaultWeather = function (city) {
     weatherContainerEl.textContent = "";
-    weatherContainerEl.setAttribute("style", "background-color: white");
     var weatherPictureEl = document.createElement("img");
-    weatherPictureEl.setAttribute("src", "http://www.clipartbest.com/cliparts/jix/6KA/jix6KA6AT.png");
-    var warningText = document.createElement("h2");
+    weatherPictureEl.setAttribute("src", "../IMG/question.jpeg");
+    var warningText = document.createElement("h4");
+    warningText.setAttribute("class", "panel-title");
     warningText.textContent = "No weather info found for " + city;
-    warningText.classList = "weather-flex-row align-center justify-space-between";
     weatherContainerEl.appendChild(warningText);
     weatherContainerEl.appendChild(weatherPictureEl);
 }
