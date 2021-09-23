@@ -4,7 +4,13 @@ var state = "Washington"
 var Country = "US"
 var page = 0;
 
+
 /*gets location from keyword*/ 
+
+var searchForm = document.getElementById("search-form"); 
+console.log("loading tM", searchForm); 
+
+
 function getEvents(page) {
 
   $('#events-panel').show();
@@ -99,3 +105,4 @@ function showAttraction(json) {
 }
 
 getEvents(page);
+searchForm.addEventListener("submit", myFunction)
