@@ -25,37 +25,38 @@ var formSubmitHandler = function (event) {
     }
 };
 
+var searchForm = document.getElementById("search-form");
+console.log(searchForm);
+
 // gets the location key for a city in the format city, state (ex: Portland, OR). Calls displayDefaultWeather
 // if location is not found.
-var getLocationKey = function (location) {
-    var city = location.split(",")[0].toLowerCase();
-    var state = location.split(" ")[1].toLowerCase();
-    var locationKey = "";
-    if (location === localStorage.getItem("search-city")) {
-        locationKey = localStorage.getItem("locationKey");
-        getForecast(locationKey, location);
-    }
-    else {
-        var apiUrl = "http://dataservice.accuweather.com/locations/v1/cities/US/search?apikey=" + apiKey + "&q=" + city + "%2C%20" + state;
 
-        fetch(apiUrl).then(function (response) {
-            if (response.ok) {
-                response.json().then(function (data) {
-                    locationKey = data[0].Key;
-                    localStorage.setItem("search-city", location);
-                    localStorage.setItem("locationKey", locationKey);
-                    getForecast(locationKey, location);
-                });
-            } else {
-                displayDefaultWeather(location);
-            }
-        })
-        .catch(function() {
+var getLocationKey = function (event) {
+    //prevents page from reloading 
+    event.preventDefault();
+    //grbs value from the input search bar created 
+    var cityName = document.getElementById("search-text").value;
+    // var city = location.trim().split(",")[0].toLowerCase();
+    // var state = location.trim().split(" ")[1].toLowerCase();
+    var apiUrl = "http://dataservice.accuweather.com/locations/v1/cities/US/search?apikey=" + apiKey + "&q=" + cityName;
+    //+ "%2C%20" + state;
+
+    fetch(apiUrl).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (data) {
+                locationKey = data[0].Key;
+                getForecast(locationKey, location);
+            });
+        } else {
             displayDefaultWeather(location);
-        });
-            
-    }
+        }
+    })
+        .catch(function (error) {
+            displayDefaultWeather(location);
+
+        })
 }
+
 
 // Uses the location key found in getLocationKey to find the 5-day forecast for the city
 var getForecast = function (key, city) {
@@ -121,10 +122,12 @@ var displayDefaultWeather = function (city) {
     weatherContainerEl.appendChild(weatherPictureEl);
 }
 
+
 if (localStorage.getItem("locationKey")) {
     getForecast(localStorage.getItem("locationKey"), localStorage.getItem("search-city"));
 } else {
     displayDefaultWeather("location");
 }
+
 
 searchContainerEl.addEventListener("submit", formSubmitHandler);
