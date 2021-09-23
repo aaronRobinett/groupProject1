@@ -1,13 +1,21 @@
 var apiKey = "rwwHjEYvXSeymqIdMcbTbUALxuTpivIX";
 var weatherContainerEl = document.querySelector("#weatherZone");
 
+var searchForm = document.getElementById("search-form"); 
+console.log(searchForm); 
+
 // gets the location key for a city in the format city, state (ex: Portland, OR). Calls displayDefaultWeather
 // if location is not found.
-var getLocationKey = function (location) {
-    var city = location.trim().split(",")[0].toLowerCase();
-    var state = location.trim().split(" ")[1].toLowerCase();
-    var apiUrl = "http://dataservice.accuweather.com/locations/v1/cities/US/search?apikey=" + apiKey + "&q=" + city + "%2C%20" + state;
-
+var getLocationKey = function (event) {
+    //prevents page from reloading 
+    event.preventDefault(); 
+    //grbs value from the input search bar created 
+    var cityName = document.getElementById("search-text").value; 
+    // var city = location.trim().split(",")[0].toLowerCase();
+    // var state = location.trim().split(" ")[1].toLowerCase();
+    var apiUrl = "http://dataservice.accuweather.com/locations/v1/cities/US/search?apikey=" + apiKey + "&q=" + cityName ; 
+    //+ "%2C%20" + state;
+    
     fetch(apiUrl).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
@@ -85,5 +93,8 @@ var displayDefaultWeather = function (city) {
     weatherContainerEl.appendChild(weatherPictureEl);
 }
 
-getLocationKey("Seattle, WA");
+g//getLocationKey("Seattle, WA");
+
+//Add Event listiner on click of submit of the search form 
+searchForm.addEventListener("submit", getLocationKey)
 
