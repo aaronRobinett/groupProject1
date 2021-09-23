@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <title>FéRIAS</title>
 </head>
@@ -106,9 +105,10 @@
 
                 <!--left side-->
                 <section class="left-side">
-                    <article class="content-left">
-                        <img src="IMG/weather.jpeg" />
-                    </article>
+                    <section class="content-left">
+                        <div id="weatherZone"></div>
+                        <!-- <img src="IMG/weather.jpeg" /> -->
+                    </section>
                     
                     <article id="itinerary" class="content-left">
                         <img src="IMG/itinerary.jpeg" />
@@ -123,6 +123,8 @@
                     }
                 };
             </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="./js/weatherApi.js"></script>
         
     </div>
     <!-- Footer -->

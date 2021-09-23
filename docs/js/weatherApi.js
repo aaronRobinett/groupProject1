@@ -58,13 +58,13 @@ var displayForecast = function (forecast, city) {
     }
     weatherContainerEl.setAttribute("style", "background-color: white");
     var cityTitleEl = document.createElement("span");
-    cityTitleEl.classList = "flex-row align-center justify-space-between";
+    cityTitleEl.classList = "weather-flex-row align-center justify-space-between";
     cityTitleEl.textContent = "5-Day Weather Forecast for " + city;
     weatherContainerEl.appendChild(cityTitleEl);
 
     for (var i = 0; i < 5; i++) {
         var dayForecastEl = document.createElement("span")
-        dayForecastEl.classList = "flex-row justify-space-between align-center";
+        dayForecastEl.classList = "weather-flex-row justify-space-between align-center";
         var day = moment(forecast[i].date).format("ddd M/D");
         dayForecastEl.textContent = day + "  " + forecast[i].highTemp + "/" + forecast[i].lowTemp + "  " + forecast[i].forecast;
         weatherContainerEl.appendChild(dayForecastEl);
@@ -80,7 +80,7 @@ var displayDefaultWeather = function (city) {
     weatherPictureEl.setAttribute("src", "http://www.clipartbest.com/cliparts/jix/6KA/jix6KA6AT.png");
     var warningText = document.createElement("h2");
     warningText.textContent = "No weather info found for " + city;
-    warningText.classList = "flex-row align-center justify-space-between";
+    warningText.classList = "weather-flex-row align-center justify-space-between";
     weatherContainerEl.appendChild(warningText);
     weatherContainerEl.appendChild(weatherPictureEl);
 }
