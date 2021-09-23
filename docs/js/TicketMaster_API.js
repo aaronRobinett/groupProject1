@@ -1,7 +1,10 @@
-var apiKey = '	f98Ap38uGlPtK0V8IYHcVxCE3Je9rta7'
+var apiKey = 'FwIuELb0CG2cLv87eAxFMrXhhAOqSNHA'
+var keyword = 'Seattle Washington'
+var state = "Washington"
+var Country = "US"
+var page = 0;
 
-var page = 'Portland, Oregon';
-
+/*gets location from keyword*/ 
 function getEvents(page) {
 
   $('#events-panel').show();
@@ -19,7 +22,7 @@ function getEvents(page) {
   
   $.ajax({
     type:"GET",
-    url:"https://app.ticketmaster.com/discovery/v2/events.json?apikey=5QGCEXAsJowiCI4n1uAwMlCGAcSNAEmG&size=4&page="+page,
+    url:"https://app.ticketmaster.com/discovery/v2/events.json?keyword="+keyword+"&apikey=FwIuELb0CG2cLv87eAxFMrXhhAOqSNHA&size=15&page="+page,
     async:true,
     dataType: "json",
     success: function(json) {
@@ -70,7 +73,7 @@ $('#next').click(function() {
 function getAttraction(id) {
   $.ajax({
     type:"GET",
-    url:"https://app.ticketmaster.com/discovery/v2/attractions/"+id+".json?apikey=5QGCEXAsJowiCI4n1uAwMlCGAcSNAEmG",
+    url:"https://app.ticketmaster.com/discovery/v2/attractions/"+id+".json?apikey=FwIuELb0CG2cLv87eAxFMrXhhAOqSNHA",
     async:true,
     dataType: "json",
     success: function(json) {

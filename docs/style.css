@@ -191,8 +191,9 @@ text-shadow: 0px 0px 20px var(--accent-color);
 .panel-title{
 color: azure;
 }
-.panel-body{
-  color: azure;
+.list-group-item-heading{
+  text-emphasis-color: var(--blue);
+}
   /*   end of box             */
 }
 .flex-row {
