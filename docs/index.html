@@ -1,200 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.common-material.min.css" />
-    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.material.min.css" />
-    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.min.css" />
-    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.material.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="./style.css">
-    <title>FéRIAS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.common-material.min.css" />
+  <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.material.min.css" />
+  <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.min.css" />
+  <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.material.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>FéRIAS</title>
 </head>
+
 <body>
 
-<div id="page-container">
+  <div id="page-container">
     <div id="content-wrap">
 
-    
-            <header>
-                <!-- title background -->
-                <span class="span-background title">
-                    <h1>FéRIAS</h1>
-                </span>
-                <!-- Header nav bar -->
-                 <nav>
-                    <!-- <ul class="nav-effects">
+
+      <header>
+        <!-- title background -->
+        <span class="span-background title">
+          <h1>FéRIAS</h1>
+        </span>
+        <!-- Header nav bar -->
+        <nav>
+          <!-- <ul class="nav-effects">
                         <div class="search-container">
                             <form action="/action_page.php" id="search-form">
                               <input type="text" placeholder="Search.." name="search" id="userInput"/>
                             </form>
                           </div> 
                     </ul> -->
-                </nav>
-            </header>
-            <!-- Hero Section -->
-            <section class="hero">
-                 <div class="hero-subtitle">           
-                <span class="span-background opacity">Plan your day!</span>
+        </nav>
+      </header>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-subtitle">
+          <span class="span-background opacity">Plan your day!</span>
         </div>
-    </section>
-            <!-- Main Content -->
-            <Main>
+      </section>
+      <!-- Main Content -->
+      <Main>
 
-            <!--Date and location-->
-    <br>
-    <div class="container">
-            <div class="notification is-primary">
-        <h2>Enter location and travel date to show weather and Ticketmaster events!</h2>
-        </div>
-    
-    
-    <!--Location Search-->
-    <div class="box">
-        <div class="columns">
-    
-    
-    <div class="card-content"  id="location">
-        <input class="input is-large is-half"  type="text" placeholder="  Enter Location">
-            </div>  
-           <div class="date">
-            <input type="date" data-display-mode="inline" data-is-range="true" data-close-on-select="false" justify="">
-        
-            <button class="button is-black" id="saveSearch">Search</button> 
-              <!-- Button to add to calendar (optional) -->
-        <div title="Add to Calendar" class="addeventatc">
-            Add to Calendar
-        <span class="start">10/03/2021 08:00 AM</span>
-        <span class="end">10/03/2021 10:00 AM</span>
-        <span class="timezone">America/Los_Angeles</span>
-        <span class="title">Summary of the event</span>
-        <span class="description">Description of the event</span>
-        <span class="location">Location of the event</span>
-        </div>
-                    </div>
+        <!--Date and location-->
+        <br>
+        <div class="container">
+          <div class="notification is-primary">
+            <h2>Enter location and travel date to show weather and Ticketmaster events!</h2>
+          </div>
+
+
+          <!--Location Search-->
+          <div class="box">
+            <div class="columns">
+
+
+              <div class="card-content" id="location" id="search-form">
+                <input class="input is-large is-half" type="text" placeholder="  Enter Location" id="userInput">
+              </div>
+              <div class="date">
+                <input type="date" data-display-mode="inline" data-is-range="true" data-close-on-select="false"
+                  justify="">
+
+                <button class="button is-black" id="saveSearch">Search</button>
+                <!-- Button to add to calendar (optional) -->
+                <div title="Add to Calendar" class="addeventatc">
+                  Add to Calendar
+                  <span class="start">10/03/2021 08:00 AM</span>
+                  <span class="end">10/03/2021 10:00 AM</span>
+                  <span class="timezone">America/Los_Angeles</span>
+                  <span class="title">Summary of the event</span>
+                  <span class="description">Description of the event</span>
+                  <span class="location">Location of the event</span>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
     </div>
 
-                <!--ticketmaster-->
-                <section class="right-side">
-                    <article id="ticketmaster" class="content-right">
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-xs-6">
-                          <div id='events-panel' class="panel panel-primary">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">Events</h3>
-                            </div>
-                            <div class="panel-body">
-                              <div id="events" class="list-group">
-                                <a href="#" class="list-group-item">
-                                  <h4 class="list-group-item-heading">Event title</h4>
-                                  <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                  <p class="venue"></p>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                  <h4 class="list-group-item-heading">Event title</h4>
-                                  <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                  <p class="venue"></p>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                  <h4 class="list-group-item-heading">Event title</h4>
-                                  <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                  <p class="venue"></p>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                  <h4 class="list-group-item-heading">Event title</h4>
-                                  <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                  <p class="venue"></p>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="panel-footer">
-                              <nav>
-                                <ul class="pager">
-                                  <li id="prev" class="previous"><a href="#"><span aria-hidden="true">&larr;</span></a></li>
-                                  <li id="next" class="next"><a href="#"><span aria-hidden="true">&rarr;</span></a></li>
-                                </ul>
-                              </nav>
-                            </div>
-                          </div>
-                          
-                          <div id='attraction-panel' class="panel panel-primary">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">Attraction</h3>
-                            </div>
-                            <div id="attraction" class="panel-body">
-                              <h4 class="list-group-item-heading">Attraction title</h4>
-                              <img class="col-xs-12" src="">
-                              <p id="classification"></p>
-                            </div>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
-                  
-                    </article>
-                </section>
+    <!--ticketmaster-->
+    <section class="right-side">
+      <article id="ticketmaster" class="content-right">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <div id='events-panel' class="panel panel-primary">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Events</h3>
+                </div>
+                <div class="panel-body">
+                  <div id="events" class="list-group">
+                    <a href="#" class="list-group-item">
+                      <h4 class="list-group-item-heading">Event title</h4>
+                      <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      <p class="venue"></p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                      <h4 class="list-group-item-heading">Event title</h4>
+                      <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      <p class="venue"></p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                      <h4 class="list-group-item-heading">Event title</h4>
+                      <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      <p class="venue"></p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                      <h4 class="list-group-item-heading">Event title</h4>
+                      <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      <p class="venue"></p>
+                    </a>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                  <nav>
+                    <ul class="pager">
+                      <li id="prev" class="previous"><a href="#"><span aria-hidden="true">&larr;</span></a></li>
+                      <li id="next" class="next"><a href="#"><span aria-hidden="true">&rarr;</span></a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
 
-                <!--left side-->
-                <section class="left-side">
-                    <section class="content-left">
-                        <div id="weatherZone"></div>
-                        <!-- <img src="IMG/weather.jpeg" /> -->
-                    </section>
-                    
-                    <article id="itinerary" class="content-left">
-                        <img src="IMG/itinerary.jpeg" />
-                    </article>                
-                </section>
+              <div id='attraction-panel' class="panel panel-primary">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Attraction</h3>
+                </div>
+                <div id="attraction" class="panel-body">
+                  <h4 class="list-group-item-heading">Attraction title</h4>
+                  <img class="col-xs-12" src="">
+                  <p id="classification"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </article>
+    </section>
+
+    <!--left side-->
+    <section class="left-side">
+      <article class="content-left">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+          <div id="weatherZone" class="panel panel-primary">
             
-            <script>
-                function projectClicked(input) {
-                    var input = input;
-                    if (input == "") {
-                        window.open("");
-                    }
-                };
-            </script>
-              <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+          </div>
+        </div>
+        </div>
+      </div>
+      </article>
+
+      <article id="itinerary" class="content-left">
+        <img src="IMG/itinerary.jpeg" />
+      </article>
+    </section>
+
+    <script>
+      function projectClicked(input) {
+        var input = input;
+        if (input == "") {
+          window.open("");
+        }
+      };
+    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+      integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+      crossorigin="anonymous"></script>
     <script src='./js/TicketMaster_API.js'></script>
     <!-- Script for framework -->
-            <script src="http://cdn.kendostatic.com/2015.1.429/js/jquery.min.js"></script>
-            <script src="http://cdn.kendostatic.com/2015.1.429/js/kendo.all.min.js"></script>
-            <script src="https://kit.fontawesome.com/2a1a81d8e8.js" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-            <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-            <script src="./js/weatherApi.js"></script>
-            
-    </Main>   
-    <!-- Footer -->
-     <footer id="footer">
-        <span class="footer-wrapper">
-            <div class="footer-container">
-                <div class="footer-text">
-                    <h2>Contributors</h2>
-                    <h3>
-                        <a href="https://github.com/Ayla122">Ayla Duran</a>
-                        <a href="https://github.com/MirandaT77">Miranda Thompson</a>
-                        <span class="line">
-                        <a href="https://github.com/Octavio258">Octavio Politron</a>
-                        <a href="https://github.com/aaronRobinett">Aaron Robinett</a>
-                    
-                    </h3>
-                </div>
-            </div>
-        </span>
-    </footer> 
-    </div>
-</body>
-</html>
+    <script src="http://cdn.kendostatic.com/2015.1.429/js/jquery.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2015.1.429/js/kendo.all.min.js"></script>
+    <script src="https://kit.fontawesome.com/2a1a81d8e8.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/weatherApi.js"></script>
 
+    </Main>
+    <!-- Footer -->
+    <footer id="footer">
+      <span class="footer-wrapper">
+        <div class="footer-container">
+          <div class="footer-text">
+            <h2>Contributors</h2>
+            <h3>
+              <a href="https://github.com/Ayla122">Ayla Duran</a>
+              <a href="https://github.com/MirandaT77">Miranda Thompson</a>
+              <span class="line">
+                <a href="https://github.com/Octavio258">Octavio Politron</a>
+                <a href="https://github.com/aaronRobinett">Aaron Robinett</a>
+
+            </h3>
+          </div>
+        </div>
+      </span>
+    </footer>
+  </div>
+</body>
+
+</html>
