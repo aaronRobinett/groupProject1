@@ -153,16 +153,10 @@ div.box {
   background-color: var(--accent2);
    position: relative;
    line-height: 1.5;
-   padding-left: 8px;
-   padding-right: 8px;
    border-radius: 5%;
    opacity: .8;
    margin-bottom: 2%;
  }
-
-.card-content {
-  background-color: --accent2;
-}
 
 
 .input.is-large.is-half {
@@ -170,23 +164,10 @@ div.box {
 }
 
 #location.card-content {
-  float: left;
-  width: 100%;
-  border-radius: 5%;
-}
-
-
-#dates.card-content {
-  float: right;
   width: 50%;
   border-radius: 5%;
-}  
-
-
-
-.column.is-half {
-  /* float:right; */flex: 2%;
 }
+
 
 
 .notification.is-primary {
@@ -206,66 +187,15 @@ div.box {
    opacity: .8;
  }
  
- /* Calendar section */
-
-
-
-.wrapper {
-  margin: 10em;                   
-  border: 0.1em solid #ccc;   
-  width: 20em;                
-  height: 24em;               
-  box-shadow: 0.1em 0.2em 0.8em #ccc;  
-}
-
-.header {
-  height: 4em;                    
-  background-color: var(--blue);     
-  color: white;               
-  text-align: center;            
-}
-
-.calendar-body .col-xs-1 {
-  width: 2.5em;                   
-  margin-left: 0.2em;             
-  text-align: center;             
-}
-
-.header p {
-  padding-top: 1.2em;             
-  text-transform: uppercase;     
-}
-
-.header span {
-  padding: 1.3em;         
-}
-
-.inactive {              
-  color: #ccc;
-}
-
-.weekdays { 
-  padding: 1em;           
-}
-
-.dates {
-  padding: 0.2em 1em 0.2em 1em;   
-}
-
-.line {                            
-  height: 0.1em;
-  border: 0.1em solid #EEEEEE;
-}
-
-.current-date {                 
-  text-transform: uppercase;
-  text-align: center;
-  padding: 0.7em;
-}
-
-.calendar-body .row .col-xs-1 p:hover {
-  color: var(--accent2);         
+.date {
+  background-color: var(--accent2);
+  position: relative;
+  line-height: 1.5;
+  padding: 3%;
+  border-radius: 5%;
+  opacity: .8;
+  margin-bottom: 2%; 
+  float: right;
 } 
-
 
 
