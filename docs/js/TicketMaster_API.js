@@ -2,6 +2,9 @@ var apiKey = '	f98Ap38uGlPtK0V8IYHcVxCE3Je9rta7'
 
 var page = 'Portland, Oregon';
 
+var searchForm = document.getElementById("search-form"); 
+console.log("loading tM", searchForm); 
+
 function getEvents(page) {
 
   $('#events-panel').show();
@@ -96,3 +99,4 @@ function showAttraction(json) {
 }
 
 getEvents(page);
+searchForm.addEventListener("submit", myFunction)
