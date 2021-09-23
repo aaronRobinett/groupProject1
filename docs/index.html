@@ -22,8 +22,9 @@
                  <nav>
                     <ul class="nav-effects">
                         <div class="search-container">
-                            <form action="/action_page.php">
-                              <input type="text" placeholder="Search.." name="search">
+                            <!-- action="/action_page.php" --> 
+                            <form id="search-form"> 
+                              <input type="text" placeholder="Enter city and state.." name="search" id="search-text">
                             </form>
                           </div> 
                     </ul>
@@ -124,6 +125,7 @@
                 };
             </script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="./js/TicketMaster_API.js"></script>
             <script src="./js/weatherApi.js"></script>
         
     </div>
