@@ -17,7 +17,6 @@ var goodLocation = function (input) {
 var formSubmitHandler = function (event) {
     event.preventDefault();
     var location = userInputEl.value.trim();
-    console.log(location);
     if (goodLocation(location)) {
         getLocationKey(location);
     } else {
@@ -31,15 +30,10 @@ console.log(searchForm);
 // gets the location key for a city in the format city, state (ex: Portland, OR). Calls displayDefaultWeather
 // if location is not found.
 
-var getLocationKey = function (event) {
-    //prevents page from reloading 
-    event.preventDefault();
-    //grbs value from the input search bar created 
-    var cityName = document.getElementById("search-text").value;
-    // var city = location.trim().split(",")[0].toLowerCase();
-    // var state = location.trim().split(" ")[1].toLowerCase();
-    var apiUrl = "http://dataservice.accuweather.com/locations/v1/cities/US/search?apikey=" + apiKey + "&q=" + cityName;
-    //+ "%2C%20" + state;
+var getLocationKey = function (location) {
+    var city = location.trim().split(",")[0].toLowerCase();
+    var state = location.trim().split(" ")[1].toLowerCase();
+    var apiUrl = "http://dataservice.accuweather.com/locations/v1/cities/US/search?apikey=" + apiKey + "&q=" + city + "%2C%20" + state;
 
     fetch(apiUrl).then(function (response) {
         if (response.ok) {
@@ -65,7 +59,6 @@ var getForecast = function (key, city) {
     fetch(apiUrl).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
-                console.log(data);
                 for (var i = 0; i < 5; i++) {
                     forecastDays[i] = {
                         date: data.DailyForecasts[i].Date.split("T")[0],
@@ -113,13 +106,13 @@ var displayForecast = function (forecast, city) {
 // a message that no weather info is found
 var displayDefaultWeather = function (city) {
     weatherContainerEl.textContent = "";
-    var weatherPictureEl = document.createElement("img");
-    weatherPictureEl.setAttribute("src", "../IMG/question.jpeg");
-    var warningText = document.createElement("h4");
+    var panelHeadingEl = document.createElement("div");
+    panelHeadingEl.setAttribute("class", "panel-heading");
+    var warningText = document.createElement("h3");
     warningText.setAttribute("class", "panel-title");
     warningText.textContent = "No weather info found for " + city;
-    weatherContainerEl.appendChild(warningText);
-    weatherContainerEl.appendChild(weatherPictureEl);
+    panelHeadingEl.appendChild(warningText);
+    weatherContainerEl.appendChild(panelHeadingEl);
 }
 
 
