@@ -77,13 +77,14 @@ height: 100%;
 }
  
 main {
-color: var(--accent-color);
+background-color: black;
 }
 
 #page-container {
   position: absolute;
   min-height: 100vh;
   width: 100%; 
+  background-color: black;
 }
 
 #content-wrap {
