@@ -1,14 +1,15 @@
 var apiKey = 'FwIuELb0CG2cLv87eAxFMrXhhAOqSNHA'
-var keyword = 'Seattle Washington'
+
+//Default setting
+var keyword = 'Seattle washington shows'
 var state = "Washington"
 var Country = "US"
 var page = 0;
 
 
+
 /*gets location from keyword*/ 
 
-var searchForm = document.getElementById("search-form"); 
-console.log("loading tM", searchForm); 
 
 
 function getEvents(page) {
@@ -28,7 +29,7 @@ function getEvents(page) {
   
   $.ajax({
     type:"GET",
-    url:"https://app.ticketmaster.com/discovery/v2/events.json?keyword="+keyword+"&apikey=FwIuELb0CG2cLv87eAxFMrXhhAOqSNHA&size=15&page="+page,
+    url:"https://app.ticketmaster.com/discovery/v2/events.json?city=Seattle&stateCode=WA&keyword="+keyword+"&apikey=FwIuELb0CG2cLv87eAxFMrXhhAOqSNHA&size=15&page="+page,
     async:true,
     dataType: "json",
     success: function(json) {
@@ -105,4 +106,4 @@ function showAttraction(json) {
 }
 
 getEvents(page);
-searchForm.addEventListener("submit", myFunction)
+searchForm.addEventListener("saveSearch", myFunction)
