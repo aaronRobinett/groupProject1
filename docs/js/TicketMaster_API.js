@@ -8,7 +8,16 @@ var page = 0;
 
 
 
-/*gets location from keyword*/ 
+//Listen for search button click 
+getEvents(page);
+document.querySelector('button').addEventListener
+('click',getLocationInfo);
+function getLocationInfo(e){
+ //Get location value from user input
+var location = document.querySelector('.input').value;
+console.log(location);
+  e.preventDefault();
+}
 
 
 
@@ -105,5 +114,3 @@ function showAttraction(json) {
   $('#classification').text(json.classifications[0].segment.name + " - " + json.classifications[0].genre.name + " - " + json.classifications[0].subGenre.name);
 }
 
-getEvents(page);
-searchForm.addEventListener("saveSearch", myFunction)
