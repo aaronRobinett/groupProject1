@@ -38,15 +38,15 @@ function getEvents(page) {
      show(data);
     
  }
+ var api_url = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=portlandoregon&apikey=FwIuELb0CG2cLv87eAxFMrXhhAOqSNHA&size=15&page="-+page;
 //calling async function
 getapi(api_url);
 
 //hide loader
-function hideloader() {
-    document.getElementById('loading').style.display = 'none';
-}
+//function hideloader() {
+    //document.getElementById('loading').style.display = 'none';
+//}
 
-/*
 function showEvents(json) {
     var items = $('#events .list-group-item');
     items.hide();
@@ -72,4 +72,17 @@ function showEvents(json) {
       });
       item=item.next();
     }
+  }
+
+  /*function showAttraction(json) {
+    $('#events-panel').hide();
+    $('#attraction-panel').show();
+    
+    $('#attraction-panel').click(function() {
+      getEvents(page);
+    });
+    
+    $('#attraction .list-group-item-heading').first().text(json.name);
+    $('#attraction img').first().attr('src',json.images[0].url);
+    $('#classification').text(json.classifications[0].segment.name + " - " + json.classifications[0].genre.name + " - " + json.classifications[0].subGenre.name);
   } */
