@@ -1,3 +1,5 @@
+//Temporary MVP TicketMaster api
+
 var apiKey = 'FwIuELb0CG2cLv87eAxFMrXhhAOqSNHA'
 
 //Default setting

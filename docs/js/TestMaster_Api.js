@@ -42,10 +42,7 @@ function getEvents(page) {
 //calling async function
 getapi(api_url);
 
-//hide loader
-//function hideloader() {
-    //document.getElementById('loading').style.display = 'none';
-//}
+
 
 function showEvents(json) {
     var items = $('#events .list-group-item');
