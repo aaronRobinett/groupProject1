@@ -1,14 +1,26 @@
+//Temporary MVP TicketMaster api
+
 var apiKey = 'FwIuELb0CG2cLv87eAxFMrXhhAOqSNHA'
-var keyword = 'Seattle Washington'
+
+//Default setting
+var keyword = 'Seattle washington shows'
 var state = "Washington"
 var Country = "US"
 var page = 0;
 
 
-/*gets location from keyword*/ 
 
-var searchForm = document.getElementById("search-form"); 
-console.log("loading tM", searchForm); 
+//Listen for search button click 
+getEvents(page);
+document.querySelector('button').addEventListener
+('click',getLocationInfo);
+function getLocationInfo(e){
+ //Get location value from user input
+var location = document.querySelector('.input').value;
+console.log(location);
+  e.preventDefault();
+}
+
 
 
 function getEvents(page) {
@@ -28,7 +40,7 @@ function getEvents(page) {
   
   $.ajax({
     type:"GET",
-    url:"https://app.ticketmaster.com/discovery/v2/events.json?keyword="+keyword+"&apikey=FwIuELb0CG2cLv87eAxFMrXhhAOqSNHA&size=15&page="+page,
+    url:"https://app.ticketmaster.com/discovery/v2/events.json?city=Seattle&stateCode=WA&keyword="+keyword+"&apikey=FwIuELb0CG2cLv87eAxFMrXhhAOqSNHA&size=15&page="+page,
     async:true,
     dataType: "json",
     success: function(json) {
@@ -104,5 +116,3 @@ function showAttraction(json) {
   $('#classification').text(json.classifications[0].segment.name + " - " + json.classifications[0].genre.name + " - " + json.classifications[0].subGenre.name);
 }
 
-getEvents(page);
-searchForm.addEventListener("submit", myFunction)
